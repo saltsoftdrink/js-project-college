@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Odd Numbers from 1 to 50</title>
+  </head>
+
+  <body>
+    <h1>Odd Numbers from 1 to 50</h1>
+    <button onclick="generateOddNumbers()">Generate Odd Numbers</button>
+    <p id="result"></p>
+
+    <script>
+      function generateOddNumbers() {
+        const result = document.getElementById('result');
+        let oddNumbers = '';
+
+        for (let i = 1; i <= 50; i++) {
+          if (i % 2 !== 0) {
+            oddNumbers += i + ' ';
+          }
+        }
+
+        result.textContent = 'Odd numbers: ' + oddNumbers;
+      }
+    </script>
+  </body>
+
+</html>

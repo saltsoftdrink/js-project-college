@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Even Number Checker</title>
+  </head>
+
+  <body>
+    <h1>Even Number Checker</h1>
+    <p>Enter a number to check if it's even:</p>
+    <input type="number" id="numberInput">
+    <button onclick="checkEven()">Check Even</button>
+    <p id="result"></p>
+
+    <script>
+      function checkEven() {
+        const numberInput = document.getElementById('numberInput');
+        const result = document.getElementById('result');
+        const inputValue = parseInt(numberInput.value);
+
+        if (isNaN(inputValue)) {
+          result.textContent = 'Please enter a valid number.';
+        } else {
+          const isEven = inputValue % 2 === 0;
+          if (isEven) {
+            result.textContent = `${inputValue} is an even number.`;
+          } else {
+            result.textContent = `${inputValue} is not an even number.`;
+          }
+        }
+      }
+    </script>
+  </body>
+
+</html>

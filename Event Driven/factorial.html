@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Factorial Calculator</title>
+  </head>
+
+  <body onload="calculateFactorial()">
+    <h1>Factorial Calculator</h1>
+    <p>Calculating the factorial of 5:</p>
+    <p id="result"></p>
+
+    <script>
+      function calculateFactorial() {
+        const result = document.getElementById('result');
+        const numberToCalculate = 5; // Specify the number for which you want to calculate the factorial
+
+        if (numberToCalculate < 0) {
+          result.textContent = 'Please enter a valid non-negative number.';
+        } else {
+          let factorial = 1;
+          for (let i = 2; i <= numberToCalculate; i++) {
+            factorial *= i;
+          }
+          result.textContent = `The factorial of ${numberToCalculate} is ${factorial}.`;
+        }
+      }
+    </script>
+  </body>
+
+</html>

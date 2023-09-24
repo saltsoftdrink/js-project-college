@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Table of 6</title>
+  </head>
+
+  <body onload="displayTable()">
+    <h1>Table of 6</h1>
+    <p id="table"></p>
+
+    <script>
+      function displayTable() {
+        const tableResult = document.getElementById('table');
+        let tableHTML = "<table>";
+
+        for (let i = 1; i <= 10; i++) {
+          const multiplication = 6 * i;
+          tableHTML += `<tr><td>6 x ${i}:</td><td>${multiplication}</td></tr>`;
+        }
+
+        tableHTML += '</table>';
+        tableResult.innerHTML = tableHTML;
+      }
+    </script>
+  </body>
+
+</html>
